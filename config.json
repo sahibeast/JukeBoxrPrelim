@@ -1,0 +1,9 @@
+{
+    "mongo" : {
+        "host" : "localhost",
+        "hosts": [
+            "localhost"
+        ]
+        "db" : "netgrail_prod"
+    }
+}
