@@ -22,12 +22,20 @@ class Post(db.Document):
         'ordering': ['-created_at']
     }
 
-"""class User(db.Document):
+class User(db.Document):
     created_at = db.DateTimeField(default=datetime.datetime.now, required=True)
     username = db.StringField(max_length=255, required=True)
-    slug = db.StringField(max_length=255, required=True)
-    body = db.StringField(required=True)
-    comments = db.ListField(db.EmbeddedDocumentField('Comment'))"""
+    choice = db.StringField(max_length=255, required=True)
+    choice_id = db.StringField(required=True)
+
+    def __unicode__(self):
+        return self.username
+
+    meta = {
+        'allow_inheritance': True,
+        'indexes': ['choice_id'],
+        'ordering': ['-created_at']
+    }
 
 
 class Comment(db.EmbeddedDocument):

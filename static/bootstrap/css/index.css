@@ -1,0 +1,14 @@
+.row-fluid{
+	height: 200px; 
+}
+.container-fluid{
+	margin-top: 100px;
+	background-color: #C9C9C9;
+}
+.span2{
+	margin-top: 100px;
+}
+
+html{
+	background-color: #C9C9C9;
+}
